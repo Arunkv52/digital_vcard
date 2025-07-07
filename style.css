@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.top-profile-next {
+    background-color: black;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.top-img img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.top-img-text-office img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.top-img-text-office p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.top-prof-box {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+
+.below-profile-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-media-all {
+    background-color: #000000;
+    margin: 20px 0;
+    border-radius: 7px;
+    padding: 16px;
+}
+
+.contact-save {
+    background-color: #000000;
+    padding: 20px 30px;
+    color: #ffffff;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+
+.top-prof-box:hover, .contact-save:hover {
+    background-color: #4bc7ea;
+    transition: 0.8s ease-in;
+}
+.social-media-all ul li a:hover{
+    background-color: #4bc7ea;
+}
+
+
+
+
+/* responsive seciton start */
+@media screen and (max-width:768px) {
+    .top-img {
+        width: 60%;
+    }
+
+    .top-img-text-office p {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width:379px) {
+    .top-prof-box {
+        background-color: #000000;
+        border-radius: 10px;
+        padding: 10px 30px;
+        width: 100%;
+    }
+}
