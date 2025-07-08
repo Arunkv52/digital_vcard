@@ -73,16 +73,24 @@ p {
     
 }
 
-.top-prof-box:hover, .contact-save:hover {
+.top-prof-box:hover, .contact-save:hover, .share-data:hover {
     background-color: #4bc7ea;
     transition: 0.8s ease-in;
 }
 .social-media-all ul li a:hover{
     background-color: #4bc7ea;
 }
-
-
-
+.share-data {
+    background-color: #000000;
+    padding: 14px;
+    border-radius: 10px;
+}
+.share-data-bg:hover{
+    cursor: pointer;
+}
+.footer p{
+    font-size: 13px;
+}
 
 /* responsive seciton start */
 @media screen and (max-width:768px) {

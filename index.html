@@ -11,13 +11,13 @@
     <!-- link css -->
     <link rel="stylesheet" href="style.css">
     <!-- favicon -->
-       <link rel="icon" type="image/x-icon" href="assets/Prism_white_layout.png">
+    <link rel="icon" type="image/x-icon" href="assets/Prism_white_layout.png">
 
 </head>
 
 <body>
 
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-2">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
@@ -29,12 +29,12 @@
                         <div class="top-img-text px-md-4 px-3">
                             <div class="top-img-text-emp">
                                 <h1>Chitharaj Selvaraj</h1>
-                                <p>Manager at Offline Advertisement</p>
+                                <p>Manager - Execution</p>
                             </div>
                             <div
-                                class="top-img-text-office d-flex justify-content-start align-items-center gap-2 pt-4 pt-md-5">
+                                class="top-img-text-office d-flex justify-content-start align-items-center gap-2 pt-5 pt-md-5">
                                 <img src="assets/Prism_white_layout.png" alt="">
-                                <p>Prism Adverto Private Limited</p>
+                                <p><strong>Prism Adverto Private Limited</strong></p>
                             </div>
                         </div>
                     </div>
@@ -91,10 +91,12 @@
                 </div>
                 <div class="social-media-all">
                     <ul class="list-unstyled text-decoration-none d-flex justify-content-around mb-0">
-                        <li><a href="https://www.facebook.com/PrismAdverto/" class="text-white text-decoration-none">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/prismadverto/?hl=en" class="text-white text-decoration-none">Instagram</a></li>
-                        <li><a href="https://twitter.com/PrismAdverto" class="text-white text-decoration-none">Twitter</a></li>
-                        <li><a href="https://in.linkedin.com/company/prism-adverto" class="text-white text-decoration-none">Linkedin</a></li>
+                        <li><a href="https://www.facebook.com/PrismAdverto/"
+                                class="text-white text-decoration-none">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/prismadverto/?hl=en"
+                                class="text-white text-decoration-none">Instagram</a></li>
+                        <li><a href="https://in.linkedin.com/company/prism-adverto"
+                                class="text-white text-decoration-none">Linkedin</a></li>
                     </ul>
                 </div>
                 <div class="footer-items d-flex justify-content-between gap-3">
@@ -130,22 +132,47 @@
                         </a>
                     </div>
                 </div>
+                <div class="share-data py-3 mt-4">
+                    <div class="share-data-bg text-center text-white">
+                        <p onclick="sharePage()">Share Details</p>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-3"></div>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer py-2">
         <p class="text-center">&#169; Developed by Prism Adverto Pvt Ltd</p>
     </div>
-    
+
 
 
     <!-- Bootstrap js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <!-- share option -->
+    <script>
+        function sharePage() {
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: shareUrl
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(shareUrl);
+                alert('Link copied to clipboard!');
+            }
+        }
+        
+    </script>
 
 </body>
 
